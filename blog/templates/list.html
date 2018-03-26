@@ -1,0 +1,14 @@
+{% staticfiles%}
+<html>
+<head>
+<title>list</title>
+</head>	
+<body>
+	{% for post in posts %}
+	Title:<a href="{% url 'post_detail' post.pk %}"> {{post.title}}</a><br><br>
+	<a href="{% url 'post_delete' post.pk %}"> Delete </a>
+	{% endfor %}
+</body>
+</html>
+
+
